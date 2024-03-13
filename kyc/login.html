@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Blockchain KYC App</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html" id="home">Home</a></li>
+            <li><a href="register.html" id="profile">Profile</a></li>
+            <li><a href="#" id="documents">Documents</a></li>
+            <li><a href="#" id="verification">Verification</a></li>
+            <li><a href="#" id="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <div id="error-message"></div>
+
+    <form id="loginForm" method="post" action="login.php">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a class="register-here" href="register.html">Register here</a></p>
+  </div>
+
+  <script>
+    // Get the error message from the query string
+    const errorMessage = new URLSearchParams(window.location.search).get("message");
+  
+    // Display the error message if it exists
+    if (errorMessage) {
+      const errorElement = document.getElementById("error-message");
+      errorElement.textContent = errorMessage;
+    }
+  </script>
+  
+  <div id="error-message"></div> ```
+  
+  
+</body>
+</html>
